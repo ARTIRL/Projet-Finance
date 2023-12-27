@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bureau d'escompte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bureau d'escompte</h1>
+    </header>
+    <main>
+        <h2>Négociation d'escompte</h2>
+        <form id="discountForm">
+            <label for="bankInfo">Nom de la banque et sa localisation :</label>
+            <input type="text" id="bankInfo" name="bankInfo" required>
+            <label for="negotiationDate">Date de négociation :</label>
+            <input type="date" id="negotiationDate" name="negotiationDate" required>
+            <label for="discountRate">Taux de l'escompte (en pourcentage) :</label>
+            <input type="number" id="discountRate" name="discountRate" step="0.01" required>
+            <label for="bankDays">Nombre de jours de banque :</label>
+            <input type="number" id="bankDays" name="bankDays" required>
+            <label for="commissionDomiciled">Commission place domicilié :</label>
+            <input type="number" id="commissionDomiciled" name="commissionDomiciled" step="0.01" required>
+            <label for="commissionNonDomiciled">Commission place non domicilié :</label>
+            <input type="number" id="commissionNonDomiciled" name="commissionNonDomiciled" step="0.01" required>
+            <label for="commissionMovedDomiciled">Commission déplacé domicilié :</label>
+            <input type="number" id="commissionMovedDomiciled" name="commissionMovedDomiciled" step="0.01" required>
+            <label for="commissionMovedNonDomiciled">Commission déplacé non domicilié :</label>
+            <input type="number" id="commissionMovedNonDomiciled" name="commissionMovedNonDomiciled" step="0.01" required>
+            <h3>Ajouter une ligne d'escompte</h3>
+            <table id="discountTable">
+                <thead>
+                    <tr>
+                        <th>Lieu de placement</th>
+                        <th>Valeur nominale</th>
+                        <th>Date d'échéance</th>
+                        <th>Nombre de jours d'agios</th>
+                        <th>Escompte</th>
+                        <th>Commission</th>
+                        <th>TVA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <button type="button" id="addRow">Ajouter une ligne</button>
+            <button type="submit">Calculer</button>
+        </form>
+        <div class="totals">
+            <h3>Total Agios :</h3>
+            <p id="totalAgios">0.00</p>
+            <h3>Total Montant Net :</h3>
+            <p id="netTotal">0.00</p>
+            <h3>Total Montant :</h3>
+            <p id="totalAmount">0.00</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bureau d'escompte Ayoub Hammami II1C</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
